@@ -20,7 +20,7 @@ const { Candy } = require("../db/models/Candy");
 // middleware will generate a 404, and send it to your
 // error-handling endware!
 
-router.get("/", async (req, res, next) => {
+router.get("/candies", async (req, res, next) => {
   try {
     const candies = await Candy.findAll();
     res.json(candies);

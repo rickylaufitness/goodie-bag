@@ -14,6 +14,7 @@ const Candy = db.define("candy", {
   quantity: {
     type: Sequelize.INTEGER,
     validate: {
+      min: 0,
       max: 10
     }
   },
@@ -23,6 +24,4 @@ const Candy = db.define("candy", {
   }
 });
 
-module.exports = {
-  Candy
-};
+module.exports = Candy;
